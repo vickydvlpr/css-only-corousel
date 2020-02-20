@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: rgba(0,0,0,0);
+}
+.corousel {
+    position: relative;
+    display: block;
+    height: 300px;
+    overflow: hidden;
+}
+@media (min-width: 600px) {
+    .corousel {
+        height: 350px;
+    }
+}
+@media (min-width: 900px) {
+    .corousel {
+        height: 500px;
+    }
+}
+.corousel img {
+    max-width: 100%;
+    display: block;
+    opacity: 0;
+    transition: 0.7s opacity;
+    position: absolute;
+}
+.corousel input {
+    height: 0;
+    width: 0;
+    display: none;
+}
+.corousel input:checked ~ img {
+    opacity: 1;
+}
+.corousel .labels {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+}
+
+
+.corousel .labels label {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #000;
+    
+    margin: 10px;
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.5);
+    
+}
